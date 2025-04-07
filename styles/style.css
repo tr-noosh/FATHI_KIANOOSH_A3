@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@100..800&display=swap');
+
+:root {
+	--w: 720px;
+	--extraspace: 0px;
+	--bgs: 2; /* BG SCALE */
+
+	line-height: 1.4;
+	font-size: 18px;
+	color: #282310;
+}
+
+body {
+	line-height: 1.25;
+	font-family: 'Trispace', serif;
+	font-size: 18px;
+	color: #282310;
+}
+
+.bg {
+	background-image: url('../assets/bgthing_1.png');
+	background-attachment: fixed;
+	background-position: 0px 0px;
+	background-size: calc(183px*var(--bgs)) calc(148px*var(--bgs));
+	animation: 14s linear bgscroll-1 infinite;
+	min-height: 100vh;
+	z-index: -2;
+	image-rendering: pixelated;
+	
+}
+
+.bg-overlay {
+	position: fixed;
+	inset: 0 0 0 0;
+	background-color: #fff;
+	background-image: url('../assets/bgthing_0.png');
+	background-attachment: fixed;
+	background-position: 0px 0px;
+	background-size: calc(200px*var(--bgs)) calc(189px*var(--bgs));
+	animation: 24s linear bgscroll infinite;
+	min-height: 100vh;
+	z-index: -1;
+	image-rendering: pixelated;
+}
+
+@keyframes bgscroll {
+    0% { background-position: 0px 0px; }
+    100% { background-position: calc(200px*var(--bgs)) calc(189px*var(--bgs)); }
+}
+
+@keyframes bgscroll-1 {
+    0% { background-position: 0px 0px; }
+    100% { background-position: calc(183px*var(--bgs)) calc(-148px*2*var(--bgs)); }
+}
+
+header {
+	background: #fff;
+}
+
+#container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px max(10px, (50% - var(--w)/2) - var(--extraspace)/2); /* cant use 'auto' with 'max()' */
+}
+
+#logo {
+	flex:0 0 100%;
+	margin: 20px auto 0px;
+	width: 100%;
+	img {
+		width: min(100%, 640px);
+		height: auto;
+		margin: auto;
+	}
+}
+
+main {
+	order: 1;
+	flex: 1 2;
+	max-width: var(--w);
+}
+
+h1, h2, h3 {
+	line-height: 1.2;
+}
+
+@media (max-width: 780px) {
+	
+}
+
+@media (max-width: 522px) {
+	
+}

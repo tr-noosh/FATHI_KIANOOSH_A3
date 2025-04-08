@@ -10,6 +10,8 @@ const config = {
 	autoPlay: true,
 	fpsLimit: 60, 
 	fullScreen: true,
+	pauseOnBlur: true,
+	pauseOnOutsideViewport: true,
 	particles: {
 		color: {
 			value: [ "#FFFFFF", "#FFd700" ]

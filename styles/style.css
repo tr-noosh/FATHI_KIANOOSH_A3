@@ -15,6 +15,7 @@ body {
 	font-family: 'Trispace', serif;
 	font-size: 18px;
 	color: #282310;
+	min-height: 100vh;
 }
 
 .bg {
@@ -23,7 +24,7 @@ body {
 	background-position: 0px 0px;
 	background-size: calc(183px*var(--bgs)) calc(148px*var(--bgs));
 	animation: 14s linear bgscroll-1 infinite;
-	min-height: 100vh;
+	min-height: 100%;
 	z-index: -2;
 	image-rendering: pixelated;
 	
@@ -55,21 +56,32 @@ body {
 
 header {
 	background: #fff;
+	height: 32px;
+	font-size: 22px;
+	letter-spacing: 0.2ch;
+	padding: 5px;
+	>nav {
+		width: 100%;
+		font-weight: bold;
+		text-align: center;
+	}
 }
 
 #container {
 	display: flex;
 	flex-wrap: wrap;
+	flex-flow: column;
 	padding: 0px max(10px, (50% - var(--w)/2) - var(--extraspace)/2); /* cant use 'auto' with 'max()' */
+	min-height: 100%; 
+	/* https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space */
 }
 
 #logo {
 	flex:0 0 100%;
 	margin: 20px auto 0px;
-	width: 100%;
+	height: fit-content;
 	img {
 		width: min(100%, 640px);
-		height: auto;
 		margin: auto;
 	}
 }

@@ -10,25 +10,35 @@
 	<title>My Homepage!</title>
 </head>
 <body>
+<div id="mobile-nav">
+	<div class="mobile-nav-button" onclick="show_nav(false);"><img src="assets/mobile-nav-exit.png"></div>
+</div>
 <header></header>
-<div id="container" class="bg">
+<div class="mobile-nav-button" onclick="show_nav(true);"><img src="assets/mobile-nav-button.png"></div>
 <div id="logo"><img src="assets/logo.png"></div>
-<div class="bg-overlay"></div>
-<main>
-	<div id="homepage">
-		<div class="griditem -g2x2">
-			wow!
+<div id="container">
+	<div class="bg1"></div>
+	<div class="bg2"></div>
+	<main>
+		<div id="homepage">
+			<div class="griditem -g2x2">
+				wow!
+			</div>
+			<div class="griditem -g1x3">
+				wow!
+			</div>
+			<div class="griditem -g1x1">
+				wow!
+			</div>
+			<div class="griditem -g1x2">
+				wow!
+			</div>
 		</div>
-		<div class="griditem -g1x2">
-			wow!
-		</div>
-		<div class="griditem -g2x1">
-			wow!
-		</div>
-	</div>
-</main>
+	</main>
 </div>
 <footer></footer>
 <script src="scripts/script.js"></script>
 </body>
 </html>
+<!-- https://css-tricks.com/3d-inset-parallax-effect/ -->
+<!--https://keithclark.co.uk/articles/pure-css-parallax-websites/ -->

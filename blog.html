@@ -10,19 +10,24 @@
 	<title>My Blog!</title>
 </head>
 <body>
+<div id="mobile-nav">
+	<div class="mobile-nav-button" onclick="show_nav(false);"><img src="assets/mobile-nav-exit.png"></div>
+</div>
 <header></header>
-<div id="container" class="bg">
+<div class="mobile-nav-button" onclick="show_nav(true);"><img src="assets/mobile-nav-button.png"></div>
 <div id="logo"><img src="assets/logo.png"></div>
-<div class="bg-overlay"></div>
-<main>
-	<!-- BLOG POSTS GET LOADED IN HERE -->
-</main>
-<aside>
-	<div id="toc">
-		<span>Table of Contents</span>
-		<ul id="linklist"></ul>
-	</div>
-</aside>
+<div id="container">
+	<div class="bg1"></div>
+	<div class="bg2"></div>
+	<main>
+		<!-- BLOG POSTS GET LOADED IN HERE -->
+	</main>
+	<aside>
+		<div id="toc">
+			<span>Table of Contents</span>
+			<ul id="linklist"></ul>
+		</div>
+	</aside>
 </div>
 <footer></footer>
 <script src="scripts/script.js"></script>

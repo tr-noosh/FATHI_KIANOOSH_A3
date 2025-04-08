@@ -37,6 +37,7 @@ function addPost(postHTML) {
 
 	main.appendChild(post);
 	linklist.appendChild(link);
+	mobile_nav.appendChild(link);
 }
 
-getBlogPost(0)
+setTimeout(10, getBlogPost(0))

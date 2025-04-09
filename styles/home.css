@@ -23,6 +23,10 @@
 	border: 6px ridge #ccc;
 	padding: 10px;
 
+	ul {
+		list-style: inside "> ";
+	}
+
 	/* https://rstacruz.github.io/rscss/variants.html */
 	&.-g1x1 {
 		grid-column: span 1;
@@ -43,11 +47,37 @@
 	&.-g1x2 {
 		grid-column: span 1;
 		grid-row: span 2;
+		p {
+			margin-bottom: 20px;
+		}
 	}
 	&.-g1x3 {
 		grid-column: span 1;
 		grid-row: span 3;
 	}
+	&.-g2x2>img {
+		float: left;
+		width: 35%;
+		margin: 10px;
+	}
+	&.-g2x1>img {
+		float: left;
+		width: 33.333%;
+		margin: 10px;
+	}
+	h3, p, ul {
+		margin: 10px;
+	}
+	h3 {
+		text-decoration: underline;
+	}
+}
+
+.coollink {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 5px;
 }
 
 /* @media (max-width: 780px) {} */

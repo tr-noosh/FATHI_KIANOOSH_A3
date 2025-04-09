@@ -1,0 +1,126 @@
+:root {
+	--w: 840px;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+main {
+	text-align: center;
+	margin-top: 64px;
+}
+
+h1,h2,h3 {
+	font-family: 'PopJoy';
+}
+
+h1 {
+	font-size: 42px;
+	margin: 12px;
+}
+
+#gridtable {
+	text-align: initial;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-auto-rows: auto;
+	max-width: 840px;
+}
+
+.gridcell {
+	background-color: #ddd;
+	outline: 6px ridge #ccc;
+	padding: 28px;
+	max-width: 560px;
+	
+}
+
+.sbahj {
+	font-family: 'Comic Sans MS', sans-serif;
+	font-size: 80px;
+	word-wrap: none;
+	.yellou {
+		color: #ff0;
+		text-shadow: #0009 5px 5px 5px;
+		line-height: .6em;
+		margin-bottom: .6em;
+	}
+}
+
+#combination, #integrated {
+	background-color: #fff;
+	outline: 6px ridge #ccc;
+	padding: 15px;
+}
+
+#integrated {
+	font-weight: 600;
+	font-size: 20px;
+}
+
+#split-points {
+	margin: 64px 0px;
+	text-align: initial;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	>div {
+		background-color: #ddd;
+		outline: 6px ridge #ccc;
+		padding: 15px;
+		h2 {
+			text-align: center;
+		}
+		ul {
+			font-size: 16px;
+			list-style: inside "> ";
+		}
+	}
+}
+
+.box {
+	font-family: 'PopJoy';
+	background: white;
+	color: black;
+	font-size: 24px;
+	width: 80%;
+	margin: 30px auto;
+	padding: 30px;
+	box-shadow: 5px 10px 10px #232;
+	border: .2em solid #554;
+	border-radius: 35px;
+}
+
+@media (max-width: 780px) {
+	#gridtable {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-auto-rows: auto;
+		max-width: 100%;
+	}
+
+	.gridcell {
+		padding: 15px 5px;
+		max-width: 100%;
+		font-size: 3.5vw;
+		overflow-x: hidden;
+	}
+
+	.box {
+		width: 95%;
+		margin: 20px auto;
+		padding: 25px;
+		font-size: 20px;
+	}
+
+	#combination {
+		h2 {
+			font-size: 24px;
+		}
+	}
+
+	#split-points {
+		grid-template-columns: 1fr;
+	}
+}
+

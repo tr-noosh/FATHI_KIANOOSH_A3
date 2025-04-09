@@ -5,26 +5,94 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/style.css">
-	<!-- <link rel="stylesheet" href="styles/blog.css"> -->
+	<link rel="stylesheet" href="styles/formatting.css">
+	<link rel="stylesheet" href="styles/formattingpage.css">
+	<script src="scripts/formatting.js"></script>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<title>My !</title>
+	<title>My Cool Text Formatting!</title>
 </head>
 <body>
+<header></header>
 <div id="mobile-nav">
 	<div class="mobile-nav-button" onclick="show_nav(false);"><img src="assets/mobile-nav-exit.png"></div>
 </div>
-<header></header>
 <div class="mobile-nav-button" onclick="show_nav(true);"><img src="assets/mobile-nav-button.png"></div>
 <div id="logo"><img src="assets/logo.png"></div>
 <div id="container">
 	<div class="bg1"></div>
 	<div class="bg2"></div>
 	<main>
+		<h1>Effects</h1>
+		<div id="gridtable">
+			<div class="gridcell">Swirl</div><div class="gridcell">
+				<f- swirl>Lost? Frightened? Confused? GOOD!!</f->
+			</div>
+			<div class="gridcell">Shake</div><div class="gridcell">
+				<f- shake>I'm freaking out!!</f->
+			</div>
+			<div class="gridcell">Wave</div><div class="gridcell">
+				<f- wave>A special power, only for those pure of heart...</f->
+			</div>
+			<div class="gridcell">Pulse</div><div class="gridcell">
+				<f- pulse>Congratulations!! You've won a</f-> <f- pulse wave="1.2s/100ms">FREE</f-> <f- pulse>iPhone!!!</f->
+			</div>
+			<div class="gridcell">Rainbow</div><div class="gridcell">
+				<f- rainbow>I'm a normal person. Who's normal.</f->
+			</div>
+			<div class="gridcell">Gradients</div><div class="gridcell sbahj">
+				<div class="yellou">GOD</div>
+				<f- grad="lg///#2889CC 30%/#fff 60%/#906A00 62%/#D99F00 74%/#fff 100%">DAAAAAAMMNNN</f->
+				<!-- TEXT FLOWING OUT FROM BOX IS INTENTIONAL!!!! -->
+			</div>
+		</div>
 		
+		<h1><br>Effect Combinations</h1>
+		<div id="combination">
+			<h2>swirl + rainbow</h2>
+			<div class="box">
+				<f- swirl rainbow>Guess again, nerd!</f->
+			</div>
+			<h2>wave + swirl + radial gradient</h2>
+			<div class="box">
+				<f- wave swirl grad="rg/circle at center/oklab/!red 10%/#0000ff 50%/!red 90%">Like a waving flag</f->
+			</div>
+			<h2>wave (0.9s 100ms) + conial gradient</h2>
+			<div class="box">
+				<f- wave="0.9s/100ms" grad="cg/90deg at 50% 60%/srgb/!hsl(360 100% 50%)/!hsl(315 100% 50%)/!hsl(270 100% 50%)/!hsl(225 100% 50%)/!hsl(180 100% 50%)/!hsl(135 100% 50%)/!hsl(90 100% 50%)/!hsl(45 100% 50%)/!hsl(0 100% 50%)">A circular rainbow</f->
+			</div>
+		</div>
+		<h1><br>Inline Effects</h1>
+		<div id="integrated">
+			<p><f- pulse shake grad="//lch/!red 10%/!blue 70%">a e i o u</f-></p>
+			<br>
+			<p>The <f- rainbow shake>transform CSS property</f-> lets you rotate, scale, skew, or <f- swirl>translate</f-> an element. It modifies the <f- wave>coordinate space</f-> of the CSS visual <f- grad="lg///#2889CC 30%/#fff 60%/#906A00 62%/#D99F00 74%/#fff 100%">formatting</f-> model.</p>
+			<p>If the property has a value different from none, a <f- shake>stacking context</f-> will be created. In that case, the element will act as a containing block for any <f- swirl shake>position: fixed;</f-> or <f- swirl wave grad="/90deg/hsl/!hsl(360 100% 50%)/!hsl(315 100% 50%)/!hsl(270 100% 50%)/!hsl(225 100% 50%)/!hsl(180 100% 50%)/!hsl(135 100% 50%)/!hsl(90 100% 50%)/!hsl(45 100% 50%)/!hsl(0 100% 50%)">position: absolute;</f-> elements that it contains.</p>
+			<br>
+			<f- wave shake grad="//oklab/!black 10%/!red 70%">a i u e o</f->
+		</div>
+		<div id="split-points">
+			<div>
+				<h2>Planned Features</h2>
+				<ul>
+					<li>More effects! (Probably based off of things from videogames)</li>
+					<li>Text effects that use 3D transforms</li>
+					<li>Performance & Sync enhancements</li>
+					<li>Text effects that render the text in a canvas</li>
+					<li>A similar but different formatting tool that lets you apply shader effects to divs</li>
+				</ul>
+			</div>
+			<div>
+				<h2>Current Flaws</h2>
+				<ul>
+					<li>Can't make lines break between whitespaces; if I do it'll break between spans as well.</li>
+					<li>It creates a new CSS tag for each instance created, even if it uses the same effect properties.</li>
+					<li>The website loads in chunks, so sometimes animations that were supposed to be synced are not.</li>
+				</ul>
+			</div>
+		</div>
 	</main>
 </div>
 <footer></footer>
 <script src="scripts/script.js"></script>
-<!-- <script src="scripts/blog.js"></script> -->
 </body>
 </html>

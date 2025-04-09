@@ -1,5 +1,5 @@
 /** @type {HTMLElement} */
-const linklist =  document.querySelector("#linklist");
+const linklist =  document.getElementById("linklist");
 
 function getBlogPost(i = 0) {
 	fetch(`posts/${i}.htm`)
@@ -35,9 +35,9 @@ function addPost(postHTML) {
 	post.appendChild(postHead);
 	post.appendChild(postContent);
 
-	main.appendChild(post);
-	linklist.appendChild(link);
-	mobile_nav.appendChild(link);
+	main.prepend(post);
+	linklist.prepend(link);
+	mobile_nav.prepend(link.cloneNode());
 }
 
 setTimeout(10, getBlogPost(0))

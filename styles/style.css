@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@100..800&display=swap');
 
+@font-face {
+    font-family: 'PopJoy';
+    src: url('../assets/popjoy.woff2') format('woff2'),
+         url('../assets/popjoy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
 	--w: 720px;
 	--extraspace: 0px;
@@ -17,6 +25,27 @@ body {
 	font-size: 18px;
 	color: #282310;
 	min-height: 100vh;
+}
+
+a {
+
+	:hover {
+
+	}
+	:visited {
+
+	}
+}
+
+#skiplink { /* https://stackoverflow.com/questions/62107074/how-to-hide-a-text-and-make-it-accessible-by-screen-reader */
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+    clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+    white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 
 .mobile-nav-button {
@@ -146,9 +175,7 @@ h1, h2, h3 {
 	line-height: 1.2;
 }
 
-/* @media (max-width: 780px) {} */
-
-@media (max-width: 522px) {
+@media (max-width: 780px) {
 	header {
 		display: none;
 	}
@@ -156,7 +183,9 @@ h1, h2, h3 {
 	.mobile-nav-button {
 		display: block;
 	}
+}
 
+@media (max-width: 522px) {
 	#container {
 		display: block;
 		grid-template-columns: unset;

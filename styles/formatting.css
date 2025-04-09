@@ -1,0 +1,58 @@
+.cool-bold {
+	font-weight: bolder;
+}
+.cool-gradient {
+	background-origin:border-box;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+}
+
+.cool-swirl, .cool-shake, .cool-wave, .cool-pulse {
+    animation-fill-mode: forwards;
+	/* white-space: preserve nowrap; */
+	white-space: pre;
+}
+/* .cool-swirl:-moz-only-whitespace, .cool-shake:-moz-only-whitespace, .cool-wave:-moz-only-whitespace {
+	white-space: revert;
+} */
+.cool-swirl span, .cool-shake span, .cool-wave span, .cool-pulse span {
+	position: relative;
+	display: inline-block;
+	white-space: pre;
+	animation-composition: accumulate;
+}
+.cool-rainbow span {
+	color: rgb(0, 255, 0);
+	-webkit-text-stroke: 5px #000000;
+	paint-order: stroke fill;
+}
+@keyframes swirl-anim {
+	0% 		{ transform: rotate(0deg) translate(-.2em) rotate(0deg); }
+	100% 	{ transform: rotate(360deg) translate(-.2em) rotate(-360deg); }
+}
+@keyframes shake-anim {
+	0% 		{ top: -0.05em; left: -0.025em; }
+	12.5% 	{ top: -0.035em; left: 0.05em; }
+	25% 	{ top: 0.025em; left: -0.05em; }
+	37.5% 	{ top: -0.025em; left: 0em; }
+	50% 	{ top: 0.05em; left: -0.025em; }
+	62.5% 	{ top: -0.05em; left: 0.05em; }
+	75% 	{ top: 0.025em; left: -0.025em; }
+	87.5% 	{ top: 0.05em; left: 0.038em; }
+	100% 	{ top: -0.05em; left: -0.025em; }
+}
+@keyframes rainbow-anim {
+	0% 		{ filter: hue-rotate(360deg); }
+}
+/* smoother sine motion? https://stackoverflow.com/a/63035682 */
+@keyframes wave-anim { 
+	0% { top: -0.2em; }
+	50% { top: 0.2em; }
+	100% { top: -0.2em; }
+}
+@keyframes pulse-anim {
+	0% { transform: scale(1); }
+	100% { transform: scale(1.5); }
+}

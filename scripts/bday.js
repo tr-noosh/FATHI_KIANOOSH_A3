@@ -9,12 +9,14 @@ async function loadParticles(options) {
 const config = {
 	autoPlay: true,
 	fpsLimit: 60, 
-	fullScreen: true,
+	fullScreen: {
+		zIndex: 9
+	},
 	pauseOnBlur: true,
 	pauseOnOutsideViewport: true,
 	particles: {
 		color: {
-			value: [ "#FFFFFF", "#FFd700" ]
+			value: [ "#ccc", "#F7D573" ]
 		},
 		move: {
 			direction: "bottom",

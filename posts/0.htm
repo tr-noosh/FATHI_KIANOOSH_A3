@@ -1,12 +1,13 @@
-<title>Fetch API 1</title>
-The Fetch API uses Request and Response objects (and other things involved with network requests), as well as related concepts such as CORS and the HTTP Origin header semantics.
-
-For making a request and fetching a resource, use the fetch() method. It is a global method in both Window and Worker contexts. This makes it available in pretty much any context you might want to fetch resources in.
-
-The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a Promise that resolves to the Response to that request — as soon as the server responds with headers — even if the server response is an HTTP error status. You can also optionally pass in an init options object as the second argument (see Request).
-
-Once a Response is retrieved, there are a number of methods available to define what the body content is and how it should be handled.
-
-You can create a request and response directly using the Request() and Response() constructors, but it's uncommon to do this directly. Instead, these are more likely to be created as results of other API actions (for example, FetchEvent.respondWith() from service workers).
-
-Find out more about using the Fetch API features in Using Fetch.
+<title>Welcome Blog</title>
+<p>
+	Welcome to the cool blog page. This is the first blog post!
+</p>
+<p>
+	Basically, how the blog works is that it checks for numbered .htm files in the "/posts" directory, starting at 0.
+	It'll increment the number and keep doing it until it tries and doesn't find a file, in which case it'll stop looking.
+</p>
+<p>
+	The post content are inserted into a div straight from the .htm file, and It'll extract text from a "title" tag to use as the post's header.
+	I know I could have just included the header in here, but actually this way is more convenient, because the header is also used as the text for the link
+	in the Table of Contents, as well as the copy of the table of contents that can be found in the mobile navigation menu.
+</p>

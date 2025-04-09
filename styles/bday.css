@@ -1,5 +1,6 @@
 body {
 	height: 100vh;
+	overflow: hidden;
 }
 
 #container {
@@ -47,4 +48,8 @@ main {
 
 #tsparticles {
 	pointer-events: none;
+}
+
+footer {
+	display: none;
 }

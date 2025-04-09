@@ -28,13 +28,19 @@ body {
 }
 
 a {
-
-	:hover {
-
-	}
-	:visited {
-
-	}
+	color:rgb(0, 197, 66);
+	transition: all .2s ease-out;
+	text-decoration: solid;
+}
+a:visited {
+	color: rgb(168, 187, 102);
+}
+a:hover {
+	color: rgb(110, 184, 0);
+	text-decoration: underline;
+}
+a:active {
+	color: #ff0;
 }
 
 #skiplink { /* https://stackoverflow.com/questions/62107074/how-to-hide-a-text-and-make-it-accessible-by-screen-reader */
